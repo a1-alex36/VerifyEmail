@@ -1,0 +1,12 @@
+joe@example.com
+joe@exam
+joe@exam8878ple99989.com
+joe9@exam8878ple99989.com
+@example.com
+it@referte23.ru
+joe@example,com
+info@referte23.ru
+joe@ex,ample,com
+bogus
+security@php.net
+help@мсз.рф

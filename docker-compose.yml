@@ -1,0 +1,38 @@
+# dev
+version: '3'
+services:
+
+  web:
+    build:
+      context: ./emails/docker/nginx
+      dockerfile: Dockerfile
+    ports:
+      - "8082:80"
+    links:
+      - php
+
+  php:
+    build:
+      context: ./emails
+      dockerfile: ./docker/php/Dockerfile
+    volumes:
+      - ./emails:/app
+      - ./emails/docker/php/log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
+
+  nginx5:
+    build:
+      context: ./emails/docker/nginx
+      dockerfile: Dockerfile-n5
+    volumes:
+      - ./emails:/app
+#    depends_on:
+#      - web
+
+  nginx6:
+    build:
+      context: ./emails/docker/nginx
+      dockerfile: Dockerfile-n6
+    volumes:
+      - ./emails:/app
+#    depends_on: # можно не настраивать видимо ??
+#      - web

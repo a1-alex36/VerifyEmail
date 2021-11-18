@@ -1,0 +1,24 @@
+{
+  "name": "alexm/otus-hw7",
+  "license": "GPL-3.0-only",
+  "description": "otus-hw7 desc",
+  "authors": [
+    {
+      "name": "a1-alex36",
+      "email": "a1-alex36@yandex.ru"
+    }
+  ],
+  "require": {
+    "php": "^7.4"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.5"
+  },
+  "bin": [
+  ],
+  "autoload": {
+    "psr-4": {
+      "Otus\\Hw7\\Emails\\": "src/"
+    }
+  }
+}
